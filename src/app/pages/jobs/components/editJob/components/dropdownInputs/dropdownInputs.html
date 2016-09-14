@@ -1,0 +1,211 @@
+<div class="widgets">
+  <div class="col-md-12">
+    <h2>Ref: <span>{{id}}</span></h2>
+  </div>
+
+  <div class="col-md-12">
+  <!--  <ba<div class="row">-card title="Search" baCardClass=" table-panel">  -->
+  <!--placeholder="Password" class="form-horizontal"                  -->
+  <form >
+    <div class="row">
+      <div class="col-md-12">
+    
+  <!--manager  eManager"-->
+        <div class="row">     
+          <label for="managerName" class="form-control-label labels-text" >Project Manager:
+          </label>
+        </div>
+       
+        <div class=" row">
+          <div class="col-md-7">
+            <div class="input-group">
+              <input type="text" class="form-control inputs-text" id="managerName" 
+              [value]="managerNew" [(ngModel)]="managerNew" (ngModelChange)="editManager" 
+              [ngStyle]="{'color': editColor}" name="manager" disabled>
+              <span class="input-group-btn">
+                <button class="btn btn-default button-edit" type="button" 
+                (click)=" editFieldsManage(1,manageActiveEdit.activeManager)">
+                  <i class="ion-edit"></i>edit
+                </button>
+              </span>   
+            </div>
+          </div><!--*ngIf="manageActiveEdit.activ     -->
+          <div class="col-md-5">
+            <select  [disabled]="manageActiveEdit.activeManager" class ="option-text form-control" [(ngModel)]="editManager" 
+            name="manager" (ngModelChange)="selectManagerId()" 
+            [ngClass]="{active: manageActiveEdit.activeManager, disabled: manageActiveEdit.activeManager}">
+              <option *ngFor="let m of jobDetails.manager" [ngValue]="m.name" 
+              selected="m.name">{{m.name}}&nbsp;
+              </option>
+            </select>
+          </div>
+        </div>
+  <!--brand-->
+        <div class="row">
+          <label for="brandName" class=" form-control-label labels-text">Brand:
+          </label>
+        </div>
+        <div class=" row">
+          <div class="col-md-7" >
+            <div class="input-group">
+              <input type="text" class="form-control inputs-text" id="brandName" 
+               [value]="brandNew" [(ngModel)]="brandNew" (ngModelChange)="editBrand" 
+               [ngStyle]="{'color': editColorBrand}" name="brand">
+               <span class="input-group-btn">
+                    <button class="btn btn-default button-edit" type="button" 
+                    (click)=" editFieldsManage(2,manageActiveEdit.activeBrand)">
+                      <i class="ion-edit"></i>edit
+                    </button>
+                </span>
+              </div>
+          </div> <!--*ngIf="manageActiveEdit.activeBrand"-->
+          <div class="col-md-5">
+            <select class ="option-text form-control" [disabled]="manageActiveEdit.activeBrand"
+            [(ngModel)]="editBrand" name="brand" (ngModelChange)="selectBrand()"
+            [ngClass]="{active: manageActiveEdit.activeBrand, disabled: manageActiveEdit.activeBrand}">
+                <option *ngFor="let m of jobDetails.brand" [ngValue]="m.name" 
+                selected="m.name">{{m.name}}&nbsp;
+                </option>
+            </select>
+           </div> 
+        </div>
+  <!--job type-->
+        <div class=" row">
+          <label for="typeName" class="form-control-label labels-text">Job Type:
+          </label>
+          </div>
+        <div class=" row">
+          <div class="col-md-7">
+            <div class="input-group">
+              <input type="text" class="form-control inputs-text" id="typeName"
+              [value]="typeJobNew" [(ngModel)]="typeJobNew" (ngModelChange)="editTypeJob" 
+               [ngStyle]="{'color': editColorType}" name="type" > 
+                 <span class="input-group-btn">
+                    <button class="btn btn-default button-edit" type="button" 
+                    (click)="editFieldsManage(3,manageActiveEdit.activeJob)">
+                      <i class="ion-edit"></i>edit
+                    </button> 
+                </span>
+              </div>
+          </div><!--*ngIf="manageActiveEdit.activeJob"-->
+           <div class="col-md-5 " >
+            <select class ="option-text form-control" [(ngModel)]="editTypeJob" 
+            [disabled]="manageActiveEdit.activeJob" name="type" (ngModelChange)="selectTypeJob()"
+            [ngClass]="{active: manageActiveEdit.activeJob, disabled: manageActiveEdit.activeJob}">
+              <option *ngFor="let m of jobDetails.type" [ngValue]=" m.name"
+                selected="m.name">{{m.name}}&nbsp;
+              </option>
+            </select>
+          </div> 
+        </div>
+  <!--client -->
+         <div class=" row">
+          <label for="clientName" class=" form-control-label labels-text">Client:
+          </label>
+          </div>
+        <div class=" row">
+          <div class="col-md-7 ">
+            <div class="input-group">
+            <input type="text" class="form-control inputs-text" id="clientName"
+            [value]="clientNew" [(ngModel)]="clientNew" (ngModelChange)="editClient" 
+            [ngStyle]="{'color': editColorClient}" name="client"  >
+             <span class="input-group-btn">
+                  <button class="btn btn-default button-edit" type="button" 
+                  (click)=" editFieldsManage(4,manageActiveEdit.activeClient)">
+                    <i class="ion-edit"></i>edit
+                  </button>
+              </span>
+            </div>
+          </div>
+           <div class="col-md-5 " ><!--*ngIf="manageActiveEdit.activeClient" -->
+            <select class ="option-text  form-control" [(ngModel)]="editClient" 
+            [disabled]="manageActiveEdit.activeClient" name="client" (ngModelChange)="selectClient()"
+            [ngClass]="{active: manageActiveEdit.activeClient, disabled: manageActiveEdit.activeClient}">
+              <option *ngFor="let m of jobDetails.client" [ngValue]=" m.name"
+               selected="m.name">{{m.name}}&nbsp;
+              </option>
+            </select>
+          </div> 
+        </div>
+
+  <!--status-->
+        <div class=" row">
+          <label for="statusName" class=" form-control-label labels-text">Job Status:
+          </label>
+          </div>
+        <div class=" row">
+          <div class="col-md-7">
+           <div class="input-group">
+            <input type="text" class="form-control inputs-text" id="statustName"
+            [value]="statusJobNew" [(ngModel)]="statusJobNew" (ngModelChange)="editStatus" 
+            [ngStyle]="{'color': editColorStatus}" name="status"  >
+              <span class="input-group-btn">
+                  <button class="btn btn-default button-edit" type="button" (click)=" editFieldsManage(5,manageActiveEdit.activeStatus)">
+                    <i class="ion-edit"></i>edit
+                  </button>
+              </span>
+            </div>
+          </div> <!--*ngIf="manageActiveEdit.activeStatus"-->
+           <div class="col-md-5 " >
+            <select class ="option-text  form-control" [(ngModel)]="editStatus" 
+            [disabled]="manageActiveEdit.activeStatus" name="status" (ngModelChange)="selectStatus()"
+            [ngClass]="{active: manageActiveEdit.activeStatus, disabled: manageActiveEdit.activeStatus}" >
+              <option *ngFor="let m of jobDetails.status" [ngValue]=" m.name"
+               selected="m.name">{{m.name}}&nbsp;
+              </option>
+            </select>
+          </div> 
+        </div>
+
+  <!--store-->
+        <div class="row">
+          <label for="storeName" class="col-md-2 form-control-label labels-text">Store:
+          </label>
+        </div>
+        <div class=" row">
+          <div class="col-md-7">
+           <div class="input-group">   
+              <input type="text" class="form-control inputs-text" id="storeName"
+              [value]="storeNew" [(ngModel)]="storeNew" (ngModelChange)="editStore" 
+              [ngStyle]="{'color': editColorStore}" name="store">
+               <span class="input-group-btn">
+                  <button class="btn btn-default button-edit" type="button" (click)=" editFieldsManage(6,manageActiveEdit.activeStore)">
+                  <i class="ion-edit"></i>edit
+                  </button>
+              </span>
+            </div>
+          </div> <!--*ngIf="manageActiveEdit.activeStore"-->
+           <div class="col-md-5 ">
+            <select class ="option-text  form-control" [(ngModel)]="editStore" 
+            [disabled]="manageActiveEdit.activeStore" name="store" (ngModelChange)="selectStore()"
+            [ngClass]="{active: manageActiveEdit.activeStore, disabled: manageActiveEdit.activeStore}">
+              <option *ngFor="let m of jobDetails.store" [ngValue]=" m.name"
+               selected="m.name">{{m.name}}&nbsp;
+              </option>
+            </select>
+          </div> 
+        </div>
+      
+  <!--Buttons-->
+      <div class="row show-grid">
+        <div class="col-md-2" *ngIf="!manageActiveEdit.activeStore || !manageActiveEdit.activeStatus || !manageActiveEdit.activeClient || !manageActiveEdit.activeManager || !manageActiveEdit.activeBrand ||!manageActiveEdit.activeJob">
+            <button type="submit" 
+            class=" btn btn-success btn-lg" 
+            (click)="saveButton()"
+             >SAVE</button>
+        </div> 
+        <div class="col-md-4" >   
+            <button type="submit"  class="btn btn-danger btn-lg" (click)="cancelButton()">CANCEL
+            </button> 
+        </div>
+      </div>
+      
+    </div>
+   </div>
+  </form>
+       
+   </div><!--col 12 -->
+  <br>
+</div>
+
+

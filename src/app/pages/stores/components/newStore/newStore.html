@@ -1,0 +1,52 @@
+<!-- Need to make Name required -->
+
+<div class="widgets">
+	<h2>New Store</h2>
+  <ba-card title="Edit Fields" baCardClass="with-scroll">
+  	<form>
+  		<div class="col-md-5">
+	  		<div class="row form-group">
+    			<label class="labels-text">Name:</label>
+    			<input class="form-control" type="text" [(ngModel)]="newStore.name" name="name">
+	    	</div>
+	    	<div class="row form-group">
+    			<label class="labels-text">Address:</label>
+    			<textarea class="form-control" [(ngModel)]="newStore.address" name="address"></textarea>
+	    	</div>
+	    	<div class="row form-group">
+    			<label class="labels-text">Country:</label>
+    			<select class="option-text form-control" [(ngModel)]="newStore.store_id" name="newStore.store_id">
+						<option class="option-text" [value]="st.id" 
+						*ngFor=" let st of storeCountry">{{st.name}}</option>
+						
+					</select>
+	    	</div>
+	    	<div class="row form-group">
+    			<label class="labels-text">Phone Number:</label>
+    			<input class="form-control" type="number" [(ngModel)]="newStore.phone" name="phone">
+	    	</div>
+
+	    </div>
+	    <div class="col-md-1"></div>	<!-- Creates gap between columns -->
+	    <div class="col-md-5">
+	    	<div class="row form-group">
+    			<label class="labels-text">Description :</label>
+    			<textarea class="form-control" [(ngModel)]="newStore.description" name="description"></textarea>
+	    	</div>
+	    	<div class="row form-group">
+    			<label class="labels-text">Latitude:</label>
+    			<input class="form-control" type="number" [(ngModel)]="newStore.lat" name="lat">
+	    	</div>
+	    	<div class="row form-group">
+    			<label class="labels-text">Longitude:</label>
+    			<input class="form-control" type="number" [(ngModel)]="newStore.lng" name="lng">
+	    	</div>
+	    	<div class="row form-group">
+			    <button type="submit" class="btn btn-secondary btn-lg" (click)="onSubmit()">
+          	SAVE
+        	</button>
+	    	</div>
+	    </div>
+  	</form>
+  </ba-card>
+</div>

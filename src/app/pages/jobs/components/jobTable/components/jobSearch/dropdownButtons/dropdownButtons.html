@@ -1,0 +1,39 @@
+
+<div class="btn-group" dropdown>
+  <button type="button" class="btn btn-default">
+      {{labels.manager}}</button>
+      <button type="button" class="btn btn-default" dropdownToggle>
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <ul class="dropdown-menu" dropdownMenu >
+       <li class="dropdown-item" *ngFor=" let m of namesJobs.manager" (click)="toggleDropdown($event)">
+         {{m.name}}
+      </li>
+     <!--[managerId]= "m.name"[(ngModel)]="managerId"  [(ngModel)]="managerId" (ngModelChange)="selectManagerId()" <a href="#"> </a>  <li class="dropdown-item">
+          <a href="#">Another action</a>
+        </li>
+        <li class="dropdown-item">
+          <a href="#">Something else here</a>
+        </li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item">
+          <a href="#">Separated link</a>
+        </li> -->
+      </ul>
+</div>
+
+<div class="btn-group" dropdown>
+      <button type="button" class="btn btn-default">{{labels.brand}}</button>
+      <button type="button" class="btn btn-default" dropdownToggle>
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <ul class="dropdown-menu" dropdownMenu>
+        <li class="dropdown-item"><a href="#">Action</a></li>
+        <li class="dropdown-item"><a href="#">Another action</a></li>
+        <li class="dropdown-item"><a href="#">Something else here</a></li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><a href="#">Separated link</a></li>
+      </ul>
+</div>
+
+  

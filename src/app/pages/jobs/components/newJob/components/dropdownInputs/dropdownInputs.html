@@ -1,0 +1,143 @@
+<div class="widgets">
+  <form>
+    <div class=" form-group row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-4">   
+            <label class="labels-text">Project Manager:</label>
+          </div>
+          <div class="col-md-4">
+            <select [(ngModel)]="newJob.manager" class="option-text form-control" name="newJob.manager">
+              <!--<option>Select Project Manager</option>-->
+              <option *ngFor=" let m of jobDetails.manager" [value]="m.name">
+                {{ m.name }} 
+              </option>
+            </select>
+          </div> 
+        </div>  
+        <!-- divider <div class="flex-item"></div> --> 
+        <div class="row"> 
+          <div class="col-md-6 flex-container"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">  
+            <label class="labels-text">Brand:</label>
+          </div>
+          <div class="col-md-4">     
+            <select [(ngModel)]="newJob.brand" class="option-text form-control" name="newJob.brand">
+              <!--<option>Select Brand</option>-->
+              <option *ngFor=" let b of jobDetails.brand" [value]="b.name" class="option-text">
+                {{ b.name }} 
+              </option>
+            </select>
+          </div>
+        </div>
+        <!-- divider  -->  
+        <div class="row"> 
+          <div class="col-md-6 flex-container"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">  
+            <label class="labels-text">Client:</label>
+          </div>
+          <div class="col-md-4">      
+            <select [(ngModel)]="newJob.client" name="newJob.client" class="option-text form-control">
+              <option *ngFor=" let c of jobDetails.client" [value]="c.name">
+                {{ c.name }} 
+              </option>
+            </select> 
+          </div>
+        </div>  
+        <!-- divider -->   
+        <div class="row"> 
+          <div class="col-md-6 flex-container"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">  
+            <label class="labels-text">Status:</label>
+          </div> 
+          <div class="col-md-4">      
+            <select [(ngModel)]="newJob.status" name="newJob.status" class="option-text form-control">
+              <option *ngFor=" let s of jobDetails.status" [value]="s.name">
+                {{ s.name }} 
+              </option>
+            </select>
+          </div>
+        </div>
+        <!-- divider -->  
+        <div class="row"> 
+          <div class="col-md-6 flex-container"></div>
+        </div>
+        <div class="row">  
+          <div class="col-md-4">  
+            <label class="labels-text">Job Type:</label>
+          </div>
+          <div class="col-md-4">       
+            <select [(ngModel)]="newJob.type" name="newJob.type" class="option-text form-control">
+              <option *ngFor=" let t of jobDetails.type" [value]="t.name">
+                {{ t.name }} 
+              </option>
+            </select>
+          </div>
+        </div>
+        <!-- divider --> 
+        <div class="row"> 
+          <div class="col-md-6 flex-container"></div>
+        </div>
+        <div class="row"> 
+          <div class="col-md-4">  
+            <label class="labels-text">Store:</label>
+          </div>
+          <div class="col-md-4">    
+            <select [(ngModel)]="newJob.store" name="newJob.store" class="option-text form-control">
+              <option *ngFor=" let s of jobDetails.store" [value]="s.name">
+                {{ s.name }} 
+              </option>
+            </select>
+          </div>
+        </div> 
+         <!-- divider    -->
+        <div class="row"> 
+          <div class="col-md-6 flex-container"></div>
+        </div>
+        <label for="textarea01" class="labels-text">Project Details:</label>
+        <textarea placeholder="{{ newJob.details }}" class="form-control" id="textarea01"
+        [(ngModel)]="newJob.details" name="newJob.details">
+        {{ newJob.details }}
+        </textarea>
+          <!-- divider    -->
+        <div class="row"> 
+          <div class="col-md-6 flex-container"></div>
+        </div>
+      </div>
+      
+      <div class=" col-md-6 form-group">
+
+      <ba-card title="Picture Uploader" baCardClass="with-scroll">
+           <ba-picture-uploader [picture]="profile.picture" [defaultPicture]="defaultPicture" [uploaderOptions]="uploaderOptions"></ba-picture-uploader>
+        </ba-card>
+
+        <!-- divider    -->
+        <div class="flex-container">   
+          <div class="flex-item"></div>
+        </div>
+        <p class="labels-text">Begin Date:</p>
+        <my-date-picker [options]="beginDatePickerOptions" (dateChanged)="onBeginDateChanged($event)" [selDate]="selectedDate"></my-date-picker>
+         <!-- divider    -->
+        <div class="row"> 
+          <div class="col-md-6 flex-container"></div>
+        </div>
+
+        <p class="labels-text">End Date:</p>
+        <my-date-picker [options]="endDatePickerOptions" (dateChanged)="onEndDateChanged($event)" [selDate]="selectedDate"></my-date-picker>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col-md-3">      
+        <Button type="button"  class="btn btn-secondary btn-lg" (click)="onSubmit()">
+          SAVE
+        </Button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,31 @@
+<style>
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+</style>
+
+
+<div class="widgets">
+  <button (click)="onNewJob()" type="button" class="btn btn-success btn-circle btn-xl"><i class="ion-plus"></i></button>
+  <div class="row">
+    <div class="col-md-12">
+    <ba-card title="Search" baCardClass=" table-panel">    
+      <job-search></job-search>
+    </ba-card>
+    </div>
+  </div>
+ <!-- 
+  <div class="row">
+    <div class="col-md-12">
+      <ba-card title="Jobs" baCardClass="with-scroll table-panel">
+        <hover-table></hover-table>
+      </ba-card>
+    </div>
+  </div>
+</div>
+-->

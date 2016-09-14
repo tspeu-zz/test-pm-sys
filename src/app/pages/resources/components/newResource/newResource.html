@@ -1,0 +1,305 @@
+<!-- Need to make Name required -->
+
+<div class="widgets">
+	<h2>New Resource</h2>
+  <ba-card title="Edit Fields" baCardClass="with-scroll">
+  	<form>
+  		<div class="col-md-5">
+	  		<div class="row form-group">
+    			<label class="labels-text">Name:</label>
+    			<input class="form-control" type="text" [(ngModel)]="newResource.name" name="name">
+	    	</div>
+	    	<div class="row form-group">
+    			<label class="labels-text">Address:</label>
+    			<textarea class="form-control" [(ngModel)]="newResource.address" name="address"></textarea>
+	    	</div>
+	    	<div class="row form-group">
+    			<label class="labels-text">Country:</label>
+    			<select class="option-text form-control" [(ngModel)]="newResource.country" name="newResource.country">
+						<option class="option-text" value="AF">Afghanistan</option>
+						<option class="option-text" value="AX">Åland Islands</option>
+						<option class="option-text" value="AL">Albania</option>
+						<option class="option-text" value="DZ">Algeria</option>
+						<option class="option-text" value="AS">American Samoa</option>
+						<option class="option-text" value="AD">Andorra</option>
+						<option class="option-text" value="AO">Angola</option>
+						<option class="option-text" value="AI">Anguilla</option>
+						<option class="option-text" value="AQ">Antarctica</option>
+						<option class="option-text" value="AG">Antigua and Barbuda</option>
+						<option class="option-text" value="AR">Argentina</option>
+						<option class="option-text" value="AM">Armenia</option>
+						<option class="option-text" value="AW">Aruba</option>
+						<option class="option-text" value="AU">Australia</option>
+						<option class="option-text" value="AT">Austria</option>
+						<option class="option-text" value="AZ">Azerbaijan</option>
+						<option class="option-text" value="BS">Bahamas</option>
+						<option class="option-text" value="BH">Bahrain</option>
+						<option class="option-text" value="BD">Bangladesh</option>
+						<option class="option-text" value="BB">Barbados</option>
+						<option class="option-text" value="BY">Belarus</option>
+						<option class="option-text" value="BE">Belgium</option>
+						<option class="option-text" value="BZ">Belize</option>
+						<option class="option-text" value="BJ">Benin</option>
+						<option class="option-text" value="BM">Bermuda</option>
+						<option class="option-text" value="BT">Bhutan</option>
+						<option class="option-text" value="BO">Bolivia, Plurinational State of</option>
+						<option class="option-text" value="BQ">Bonaire, Sint Eustatius and Saba</option>
+						<option class="option-text" value="BA">Bosnia and Herzegovina</option>
+						<option class="option-text" value="BW">Botswana</option>
+						<option class="option-text" value="BV">Bouvet Island</option>
+						<option class="option-text" value="BR">Brazil</option>
+						<option class="option-text" value="IO">British Indian Ocean Territory</option>
+						<option class="option-text" value="BN">Brunei Darussalam</option>
+						<option class="option-text" value="BG">Bulgaria</option>
+						<option class="option-text" value="BF">Burkina Faso</option>
+						<option class="option-text" value="BI">Burundi</option>
+						<option class="option-text" value="KH">Cambodia</option>
+						<option class="option-text" value="CM">Cameroon</option>
+						<option class="option-text" value="CA">Canada</option>
+						<option class="option-text" value="CV">Cape Verde</option>
+						<option class="option-text" value="KY">Cayman Islands</option>
+						<option class="option-text" value="CF">Central African Republic</option>
+						<option class="option-text" value="TD">Chad</option>
+						<option class="option-text" value="CL">Chile</option>
+						<option class="option-text" value="CN">China</option>
+						<option class="option-text" value="CX">Christmas Island</option>
+						<option class="option-text" value="CC">Cocos (Keeling) Islands</option>
+						<option class="option-text" value="CO">Colombia</option>
+						<option class="option-text" value="KM">Comoros</option>
+						<option class="option-text" value="CG">Congo</option>
+						<option class="option-text" value="CD">Congo, the Democratic Republic of the</option>
+						<option class="option-text" value="CK">Cook Islands</option>
+						<option class="option-text" value="CR">Costa Rica</option>
+						<option class="option-text" value="CI">Côte d'Ivoire</option>
+						<option class="option-text" value="HR">Croatia</option>
+						<option class="option-text" value="CU">Cuba</option>
+						<option class="option-text" value="CW">Curaçao</option>
+						<option class="option-text" value="CY">Cyprus</option>
+						<option class="option-text" value="CZ">Czech Republic</option>
+						<option class="option-text" value="DK">Denmark</option>
+						<option class="option-text" value="DJ">Djibouti</option>
+						<option class="option-text" value="DM">Dominica</option>
+						<option class="option-text" value="DO">Dominican Republic</option>
+						<option class="option-text" value="EC">Ecuador</option>
+						<option class="option-text" value="EG">Egypt</option>
+						<option class="option-text" value="SV">El Salvador</option>
+						<option class="option-text" value="GQ">Equatorial Guinea</option>
+						<option class="option-text" value="ER">Eritrea</option>
+						<option class="option-text" value="EE">Estonia</option>
+						<option class="option-text" value="ET">Ethiopia</option>
+						<option class="option-text" value="FK">Falkland Islands (Malvinas)</option>
+						<option class="option-text" value="FO">Faroe Islands</option>
+						<option class="option-text" value="FJ">Fiji</option>
+						<option class="option-text" value="FI">Finland</option>
+						<option class="option-text" value="FR">France</option>
+						<option class="option-text" value="GF">French Guiana</option>
+						<option class="option-text" value="PF">French Polynesia</option>
+						<option class="option-text" value="TF">French Southern Territories</option>
+						<option class="option-text" value="GA">Gabon</option>
+						<option class="option-text" value="GM">Gambia</option>
+						<option class="option-text" value="GE">Georgia</option>
+						<option class="option-text" value="DE">Germany</option>
+						<option class="option-text" value="GH">Ghana</option>
+						<option class="option-text" value="GI">Gibraltar</option>
+						<option class="option-text" value="GR">Greece</option>
+						<option class="option-text" value="GL">Greenland</option>
+						<option class="option-text" value="GD">Grenada</option>
+						<option class="option-text" value="GP">Guadeloupe</option>
+						<option class="option-text" value="GU">Guam</option>
+						<option class="option-text" value="GT">Guatemala</option>
+						<option class="option-text" value="GG">Guernsey</option>
+						<option class="option-text" value="GN">Guinea</option>
+						<option class="option-text" value="GW">Guinea-Bissau</option>
+						<option class="option-text" value="GY">Guyana</option>
+						<option class="option-text" value="HT">Haiti</option>
+						<option class="option-text" value="HM">Heard Island and McDonald Islands</option>
+						<option class="option-text" value="VA">Holy See (Vatican City State)</option>
+						<option class="option-text" value="HN">Honduras</option>
+						<option class="option-text" value="HK">Hong Kong</option>
+						<option class="option-text" value="HU">Hungary</option>
+						<option class="option-text" value="IS">Iceland</option>
+						<option class="option-text" value="IN">India</option>
+						<option class="option-text" value="ID">Indonesia</option>
+						<option class="option-text" value="IR">Iran, Islamic Republic of</option>
+						<option class="option-text" value="IQ">Iraq</option>
+						<option class="option-text" value="IE">Ireland</option>
+						<option class="option-text" value="IM">Isle of Man</option>
+						<option class="option-text" value="IL">Israel</option>
+						<option class="option-text" value="IT">Italy</option>
+						<option class="option-text" value="JM">Jamaica</option>
+						<option class="option-text" value="JP">Japan</option>
+						<option class="option-text" value="JE">Jersey</option>
+						<option class="option-text" value="JO">Jordan</option>
+						<option class="option-text" value="KZ">Kazakhstan</option>
+						<option class="option-text" value="KE">Kenya</option>
+						<option class="option-text" value="KI">Kiribati</option>
+						<option class="option-text" value="KP">Korea, Democratic People's Republic of</option>
+						<option class="option-text" value="KR">Korea, Republic of</option>
+						<option class="option-text" value="KW">Kuwait</option>
+						<option class="option-text" value="KG">Kyrgyzstan</option>
+						<option class="option-text" value="LA">Lao People's Democratic Republic</option>
+						<option class="option-text" value="LV">Latvia</option>
+						<option class="option-text" value="LB">Lebanon</option>
+						<option class="option-text" value="LS">Lesotho</option>
+						<option class="option-text" value="LR">Liberia</option>
+						<option class="option-text" value="LY">Libya</option>
+						<option class="option-text" value="LI">Liechtenstein</option>
+						<option class="option-text" value="LT">Lithuania</option>
+						<option class="option-text" value="LU">Luxembourg</option>
+						<option class="option-text" value="MO">Macao</option>
+						<option class="option-text" value="MK">Macedonia, the former Yugoslav Republic of</option>
+						<option class="option-text" value="MG">Madagascar</option>
+						<option class="option-text" value="MW">Malawi</option>
+						<option class="option-text" value="MY">Malaysia</option>
+						<option class="option-text" value="MV">Maldives</option>
+						<option class="option-text" value="ML">Mali</option>
+						<option class="option-text" value="MT">Malta</option>
+						<option class="option-text" value="MH">Marshall Islands</option>
+						<option class="option-text" value="MQ">Martinique</option>
+						<option class="option-text" value="MR">Mauritania</option>
+						<option class="option-text" value="MU">Mauritius</option>
+						<option class="option-text" value="YT">Mayotte</option>
+						<option class="option-text" value="MX">Mexico</option>
+						<option class="option-text" value="FM">Micronesia, Federated States of</option>
+						<option class="option-text" value="MD">Moldova, Republic of</option>
+						<option class="option-text" value="MC">Monaco</option>
+						<option class="option-text" value="MN">Mongolia</option>
+						<option class="option-text" value="ME">Montenegro</option>
+						<option class="option-text" value="MS">Montserrat</option>
+						<option class="option-text" value="MA">Morocco</option>
+						<option class="option-text" value="MZ">Mozambique</option>
+						<option class="option-text" value="MM">Myanmar</option>
+						<option class="option-text" value="NA">Namibia</option>
+						<option class="option-text" value="NR">Nauru</option>
+						<option class="option-text" value="NP">Nepal</option>
+						<option class="option-text" value="NL">Netherlands</option>
+						<option class="option-text" value="NC">New Caledonia</option>
+						<option class="option-text" value="NZ">New Zealand</option>
+						<option class="option-text" value="NI">Nicaragua</option>
+						<option class="option-text" value="NE">Niger</option>
+						<option class="option-text" value="NG">Nigeria</option>
+						<option class="option-text" value="NU">Niue</option>
+						<option class="option-text" value="NF">Norfolk Island</option>
+						<option class="option-text" value="MP">Northern Mariana Islands</option>
+						<option class="option-text" value="NO">Norway</option>
+						<option class="option-text" value="OM">Oman</option>
+						<option class="option-text" value="PK">Pakistan</option>
+						<option class="option-text" value="PW">Palau</option>
+						<option class="option-text" value="PS">Palestinian Territory, Occupied</option>
+						<option class="option-text" value="PA">Panama</option>
+						<option class="option-text" value="PG">Papua New Guinea</option>
+						<option class="option-text" value="PY">Paraguay</option>
+						<option class="option-text" value="PE">Peru</option>
+						<option class="option-text" value="PH">Philippines</option>
+						<option class="option-text" value="PN">Pitcairn</option>
+						<option class="option-text" value="PL">Poland</option>
+						<option class="option-text" value="PT">Portugal</option>
+						<option class="option-text" value="PR">Puerto Rico</option>
+						<option class="option-text" value="QA">Qatar</option>
+						<option class="option-text" value="RE">Réunion</option>
+						<option class="option-text" value="RO">Romania</option>
+						<option class="option-text" value="RU">Russian Federation</option>
+						<option class="option-text" value="RW">Rwanda</option>
+						<option class="option-text" value="BL">Saint Barthélemy</option>
+						<option class="option-text" value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+						<option class="option-text" value="KN">Saint Kitts and Nevis</option>
+						<option class="option-text" value="LC">Saint Lucia</option>
+						<option class="option-text" value="MF">Saint Martin (French part)</option>
+						<option class="option-text" value="PM">Saint Pierre and Miquelon</option>
+						<option class="option-text" value="VC">Saint Vincent and the Grenadines</option>
+						<option class="option-text" value="WS">Samoa</option>
+						<option class="option-text" value="SM">San Marino</option>
+						<option class="option-text" value="ST">Sao Tome and Principe</option>
+						<option class="option-text" value="SA">Saudi Arabia</option>
+						<option class="option-text" value="SN">Senegal</option>
+						<option class="option-text" value="RS">Serbia</option>
+						<option class="option-text" value="SC">Seychelles</option>
+						<option class="option-text" value="SL">Sierra Leone</option>
+						<option class="option-text" value="SG">Singapore</option>
+						<option class="option-text" value="SX">Sint Maarten (Dutch part)</option>
+						<option class="option-text" value="SK">Slovakia</option>
+						<option class="option-text" value="SI">Slovenia</option>
+						<option class="option-text" value="SB">Solomon Islands</option>
+						<option class="option-text" value="SO">Somalia</option>
+						<option class="option-text" value="ZA">South Africa</option>
+						<option class="option-text" value="GS">South Georgia and the South Sandwich Islands</option>
+						<option class="option-text" value="SS">South Sudan</option>
+						<option class="option-text" value="ES">Spain</option>
+						<option class="option-text" value="LK">Sri Lanka</option>
+						<option class="option-text" value="SD">Sudan</option>
+						<option class="option-text" value="SR">Suriname</option>
+						<option class="option-text" value="SJ">Svalbard and Jan Mayen</option>
+						<option class="option-text" value="SZ">Swaziland</option>
+						<option class="option-text" value="SE">Sweden</option>
+						<option class="option-text" value="CH">Switzerland</option>
+						<option class="option-text" value="SY">Syrian Arab Republic</option>
+						<option class="option-text" value="TW">Taiwan, Province of China</option>
+						<option class="option-text" value="TJ">Tajikistan</option>
+						<option class="option-text" value="TZ">Tanzania, United Republic of</option>
+						<option class="option-text" value="TH">Thailand</option>
+						<option class="option-text" value="TL">Timor-Leste</option>
+						<option class="option-text" value="TG">Togo</option>
+						<option class="option-text" value="TK">Tokelau</option>
+						<option class="option-text" value="TO">Tonga</option>
+						<option class="option-text" value="TT">Trinidad and Tobago</option>
+						<option class="option-text" value="TN">Tunisia</option>
+						<option class="option-text" value="TR">Turkey</option>
+						<option class="option-text" value="TM">Turkmenistan</option>
+						<option class="option-text" value="TC">Turks and Caicos Islands</option>
+						<option class="option-text" value="TV">Tuvalu</option>
+						<option class="option-text" value="UG">Uganda</option>
+						<option class="option-text" value="UA">Ukraine</option>
+						<option class="option-text" value="AE">United Arab Emirates</option>
+						<option class="option-text" value="GB">United Kingdom</option>
+						<option class="option-text" value="US">United States</option>
+						<option class="option-text" value="UM">United States Minor Outlying Islands</option>
+						<option class="option-text" value="UY">Uruguay</option>
+						<option class="option-text" value="UZ">Uzbekistan</option>
+						<option class="option-text" value="VU">Vanuatu</option>
+						<option class="option-text" value="VE">Venezuela, Bolivarian Republic of</option>
+						<option class="option-text" value="VN">Viet Nam</option>
+						<option class="option-text" value="VG">Virgin Islands, British</option>
+						<option class="option-text" value="VI">Virgin Islands, U.S.</option>
+						<option class="option-text" value="WF">Wallis and Futuna</option>
+						<option class="option-text" value="EH">Western Sahara</option>
+						<option class="option-text" value="YE">Yemen</option>
+						<option class="option-text" value="ZM">Zambia</option>
+						<option class="option-text" value="ZW">Zimbabwe</option>
+					</select>
+	    	</div>
+	    	<div class="row form-group">
+    			<label class="labels-text">Phone Number:</label>
+    			<input class="form-control" type="number" [(ngModel)]="newResource.phone" name="phone">
+	    	</div>
+	    	<div class="row form-group">
+    			<label class="labels-text">Resource Type:</label>
+    			<select class="option-text form-control" [(ngModel)]="newResource.type" name="newResource.type">
+    				<option class="option-text" *ngFor="let t of types" [value]="t.name"> 
+    					{{t.name}}
+    				</option>
+    			</select>
+	    	</div>
+	    </div>
+	    <div class="col-md-1"></div>	<!-- Creates gap between columns -->
+	    <div class="col-md-5">
+	    	<div class="row form-group">
+    			<label class="labels-text">Resource Details:</label>
+    			<textarea class="form-control" [(ngModel)]="newResource.details" name="details"></textarea>
+	    	</div>
+	    	<div class="row form-group">
+    			<label class="labels-text">Latitude:</label>
+    			<input class="form-control" type="number" [(ngModel)]="newResource.lat" name="lat">
+	    	</div>
+	    	<div class="row form-group">
+    			<label class="labels-text">Longitude:</label>
+    			<input class="form-control" type="number" [(ngModel)]="newResource.lng" name="lng">
+	    	</div>
+	    	<div class="row form-group">
+			    <button type="submit" class="btn btn-secondary btn-lg" (click)="onSubmit()">
+          	SAVE
+        	</button>
+	    	</div>
+	    </div>
+  	</form>
+  </ba-card>
+</div>

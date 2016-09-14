@@ -1,0 +1,54 @@
+{
+		
+			"manager"	: [ 
+				{"id": 0, "name" : "Any Project Manager"},
+				{"id": 1, "name" : "Laurie Chalmers"},
+				{"id": 2, "name" : "Pm-1"},
+				{"id": 3, "name" : "Pm-2"},
+				{"id": 4, "name" : "Pm-3"},
+				{"id": 2, "name" : "Pm-4"}
+			],
+			"brand"		:[
+				{"id": 0,"name" : "Any Brand"},
+				{"id": 1,"name" : "Apple"},
+				{"id": 2,"name" : "IBM"},
+				{"id": 3,"name" : "Google"},
+				{"id": 4,"name" : "Intel"},
+				{"id": 5,"name" : "Microsoft"},
+				{"id": 6,"name" : "Dell"},
+				{"id": 7,"name" : "Amazon"}
+			] ,
+			"client"	:[
+				{"id": 0,"name" : "Any Client"},
+				{"id": 1,"name" : "Apple"},
+				{"id": 2,"name" : "IBM"},
+				{"id": 3,"name" : "Google"},
+				{"id": 4,"name" : "Intel"},
+				{"id": 5,"name" : "Microsoft"},
+				{"id": 6,"name" : "Dell"},
+				{"id": 7,"name" : "Amazon"}
+			] ,
+			"status"	:[
+				{"id": 0,"name" : "Any Status"},
+				{"id": 1,"name" : "Open"},
+				{"id": 2,"name" : "Closed"},
+				{"id": 3,"name" : "Bid"}
+			] ,
+			"type"		: [
+				{"id": 0,"name" : "Any Job Type"},
+				{"id": 1,"name" : "CAD Drawings"},
+				{"id": 2,"name" : "Site Survey"},
+				{"id": 3,"name" : "Maintainence"},
+				{"id": 4,"name" : "Installation"},
+				{"id": 5,"name" : "Other"}
+
+			],"store"		: [
+				{"id": 0,"name" : "Any Store"},
+				{"id": 1,"name" : "England"},
+				{"id": 2,"name" : "France"},
+				{"id": 3,"name" : "Germany"},
+				{"id": 4,"name" : "Ireland"}
+		]
+}
+	
+

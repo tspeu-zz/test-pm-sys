@@ -1,0 +1,89 @@
+<style>
+	.row {
+		width: 100%;
+	}
+	.row::after {
+    content: "";
+    clear: both;
+	}
+
+	[class*="col-"] {
+    float: left;
+    padding: 15px;
+	}
+	.col-1 {width: 200px;}
+	.col-2 {width: 16.66%;}
+</style>
+
+
+
+<div class="flex-container">
+	<div class="row">
+		<div class="col-1 form-group">
+			<label class="col-1 labels-text"> {{labels.manager}}:&nbsp;</label>
+			<select class="option-text form-control" [(ngModel)]="managerId">
+			<option *ngFor="let m of namesJobs.manager" 
+			[ngValue]="m.name"  selected="m.name">{{ m.name }} 
+			&nbsp;</option>
+			</select> 
+		</div>
+
+		<div class="col-1 form-group">
+		 	<label class="col-1 labels-text"> {{labels.brand}}:&nbsp;</label>
+			<select class="option-text form-control" [(ngModel)]="brandId">
+			<option *ngFor="let m of namesJobs.brand" 
+			[ngValue]="m.name"  selected="m.name">{{ m.name }}&nbsp; 
+			</option>
+		 	</select>
+		</div>
+
+		<div class="col-1 form-group">
+			<label class="col-1 labels-text"> {{labels.jobtype}}:&nbsp;</label>
+			<select class="option-text form-control" [(ngModel)]="typeId">
+			<option *ngFor="let m of namesJobs.type" 
+			[ngValue]="m.name"  selected="m.name">{{ m.name }}&nbsp; 
+			</option>
+		  </select>
+		</div>
+
+		<div class="col-1 form-group">
+			<label class="col-1 labels-text"> {{labels.store}}:&nbsp;</label>
+			<select class="option-text form-control" [(ngModel)]="storeId">
+			<option *ngFor="let m of namesJobs.store" 
+			[ngValue]="m.name"  selected="m.name">{{ m.name }}&nbsp; 
+			</option>
+			</select>
+		</div>
+
+		<div class="col-1 form-group"> 
+			<label class="col-1 labels-text"> {{labels.status}}:&nbsp;</label>
+			<select class="option-text form-control" [(ngModel)]="statusId">
+			<option *ngFor="let m of namesJobs.status" 
+			[ngValue]="m.name"  selected="m.name">{{ m.name }}&nbsp; 
+			</option>
+			</select>
+		</div>
+
+		<div class="col-1 form-group">
+			<label class="col-1 labels-text"> {{labels.client}}:&nbsp;</label>
+			<select class="option-text form-control" [(ngModel)]="clientId">
+			<option *ngFor="let m of namesJobs.client" [ngValue]="m.name"  
+			selected="m.name">{{ m.name }}&nbsp; 
+			</option>
+			</select> 
+		</div>
+	</div>
+
+	<div class="row col-1">
+	  <div> 
+			<Button type="button" class="btn btn-secondary btn-lg" (click)="onSelect()">
+				SEARCH
+			</Button>
+	  </div>
+	</div>
+</div>
+
+<!--@table component -->
+<ba-card title="Jobs" baCardClass="with-scroll table-panel flex-container">
+  <hover-table [job]= "jobs"></hover-table>
+</ba-card>

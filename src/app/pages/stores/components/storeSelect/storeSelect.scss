@@ -1,0 +1,58 @@
+.labels-text {
+		
+	font-size: 28px;		
+
+}
+
+.inputs-text{
+	color : #282828;
+	font-size: 16px;		
+
+}
+ .option-text{
+ 	color : #222;
+ 	font-size: 16px;
+ 	//background-color:#5573AD ;
+   background-color: rgb(0, 0, 0) transparent;
+
+ }
+
+ .button-edit{
+ 	color : #fff;
+ 	font-size: 14px;
+ 	background-color:#5573AD ;
+ }
+
+ .disable-Color{
+ 	color : rgb(0, 0, 0) transparent;
+ }
+
+ .active {
+      background-color: rgb(0, 0, 0) transparent;
+}
+.disabled {
+      color: gray;
+      border: medium solid gray;
+}
+
+
+
+ .flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
+   // background-color: #fff;
+    //padding: 10px 00px 10px 00px;
+    background: rgb(0, 0, 0) transparent;
+   // background-color: rgba(0, 0, 0, 0.6);
+}
+
+.flex-item {
+	flex-wrap: wrap;
+    background: rgb(0, 0, 0) transparent;
+   // background-color: red;
+    width: auto;
+    height: auto;
+}

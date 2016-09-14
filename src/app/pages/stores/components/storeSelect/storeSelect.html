@@ -1,0 +1,35 @@
+<div class="row">    
+  <div class="col-md-6">
+    <ba-card title="Stores" baCardClass="with-scroll">
+      <div>
+        <h1>Select Store</h1>
+      </div>
+        <div class="form-group">
+          <label for="country" >Select country</label>
+          <select class="form-control " id="country" 
+          [(ngModel)]="storeId" (ngModelChange)="onChangeObj($event)">
+            <option class="option-text" *ngFor="let s of names.store" 
+            [ngValue]="s.id" selected="s.id" >
+            {{s.name}}</option>
+          </select>
+        </div>
+    <!-- search  -->
+        <button type="submit" class="btn btn-default btn-lg" 
+        (click)="searchStoreId(storeId) " (changes)="childChangesHandler($event)">Search
+        </button>
+        <button type="button" class="btn btn-default btn-lg" >New Store</button>
+    </ba-card>
+  </div><!-- col -->
+<!--carousel component -->
+    <div class="col-md-6">     
+      <carrusel-example></carrusel-example>
+    </div>
+</div>
+<!--row-->
+<div class="row">
+  <div class="widgets"><!--input the stores that found with the id -->
+      <store-detail [store]="searchStore"></store-detail>    
+  </div>
+</div>
+
+ 
